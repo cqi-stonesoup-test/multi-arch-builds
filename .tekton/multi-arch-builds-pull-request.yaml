@@ -23,7 +23,7 @@ spec:
   - name: git-url
     value: '{{source_url}}'
   - name: image-expires-after
-    value: 5d
+    value: 3d
   - name: output-image
     value: quay.io/redhat-user-workloads/cqi-tenant/multi-arch-builds/multi-arch-builds:on-pr-{{revision}}
   - name: path-context
