@@ -407,6 +407,9 @@ spec:
       params:
       - name: IMAGE
         value: $(tasks.build-container.results.IMAGE_URL)
+      - name: ADDITIONAL_TAGS
+        value:
+        - devel
       runAfter:
       - build-container
       taskRef:
