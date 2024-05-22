@@ -30,19 +30,29 @@ spec:
   pipelineRef:
     name: ci-build-pipeline
   taskRunTemplate: {}
+
   workspaces:
-  - name: workspace
+
+  - name: workspace-amd64
     volumeClaimTemplate:
-      metadata:
-        creationTimestamp: null
       spec:
         accessModes:
         - ReadWriteOnce
         resources:
           requests:
             storage: 1Gi
-      status: {}
+
+  - name: workspace-arm64
+    volumeClaimTemplate:
+      spec:
+        accessModes:
+        - ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi
+
   - name: git-auth
     secret:
       secretName: '{{ git_auth_secret }}'
+
 status: {}

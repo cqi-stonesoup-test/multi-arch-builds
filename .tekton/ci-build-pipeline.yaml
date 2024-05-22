@@ -7,7 +7,7 @@ spec:
   - name: show-sbom
     params:
     - name: IMAGE_URL
-      value: $(tasks.build-container.results.IMAGE_URL)
+      value: $(tasks.build-container-amd64.results.IMAGE_URL)
     taskRef:
       params:
       - name: name
@@ -22,11 +22,11 @@ spec:
     - name: pipelinerun-name
       value: $(context.pipelineRun.name)
     - name: git-url
-      value: $(tasks.clone-repository.results.url)?rev=$(tasks.clone-repository.results.commit)
+      value: $(tasks.clone-repository-amd64.results.url)?rev=$(tasks.clone-repository-amd64.results.commit)
     - name: image-url
       value: $(params.output-image)
     - name: build-task-status
-      value: $(tasks.build-container.status)
+      value: $(tasks.build-container-amd64.status)
     taskRef:
       params:
       - name: name
@@ -38,7 +38,8 @@ spec:
       resolver: bundles
     workspaces:
     - name: workspace
-      workspace: workspace
+      workspace: workspace-amd64
+
   params:
   - description: Source Repository URL
     name: git-url
@@ -93,6 +94,7 @@ spec:
       during build
     name: build-args-file
     type: string
+
   results:
   - description: ""
     name: IMAGE_URL
@@ -102,13 +104,14 @@ spec:
     value: $(tasks.build-container.results.IMAGE_DIGEST)
   - description: ""
     name: CHAINS-GIT_URL
-    value: $(tasks.clone-repository.results.url)
+    value: $(tasks.clone-repository-amd64.results.url)
   - description: ""
     name: CHAINS-GIT_COMMIT
-    value: $(tasks.clone-repository.results.commit)
+    value: $(tasks.clone-repository-amd64.results.commit)
   - description: ""
     name: JAVA_COMMUNITY_DEPENDENCIES
-    value: $(tasks.build-container.results.JAVA_COMMUNITY_DEPENDENCIES)
+    value: $(tasks.build-container-amd64.results.JAVA_COMMUNITY_DEPENDENCIES)
+
   tasks:
   - name: init
     params:
@@ -127,7 +130,10 @@ spec:
       - name: kind
         value: task
       resolver: bundles
-  - name: clone-repository
+
+  # amd64
+
+  - name: clone-repository-amd64
     params:
     - name: url
       value: $(params.git-url)
@@ -151,15 +157,16 @@ spec:
       - "true"
     workspaces:
     - name: output
-      workspace: workspace
+      workspace: workspace-amd64
     - name: basic-auth
       workspace: git-auth
-  - name: prefetch-dependencies
+
+  - name: prefetch-dependencies-amd64
     params:
     - name: input
       value: $(params.prefetch-input)
     runAfter:
-    - clone-repository
+    - clone-repository-amd64
     taskRef:
       params:
       - name: name
@@ -176,10 +183,11 @@ spec:
       - ""
     workspaces:
     - name: source
-      workspace: workspace
+      workspace: workspace-amd64
     - name: git-basic-auth
       workspace: git-auth
-  - name: build-container
+
+  - name: build-container-amd64
     params:
     - name: IMAGE
       value: $(params.output-image)
@@ -194,11 +202,11 @@ spec:
     - name: IMAGE_EXPIRES_AFTER
       value: $(params.image-expires-after)
     - name: COMMIT_SHA
-      value: $(tasks.clone-repository.results.commit)
+      value: $(tasks.clone-repository-amd64.results.commit)
     - name: BUILD_ARGS_FILE
       value: $(params.build-args-file)
     runAfter:
-    - prefetch-dependencies
+    - prefetch-dependencies-amd64
     taskRef:
       params:
       - name: name
@@ -215,13 +223,137 @@ spec:
       - "true"
     workspaces:
     - name: source
-      workspace: workspace
+      workspace: workspace-amd64
+
+  # arm64
+
+  - name: clone-repository-arm64
+    params:
+    - name: url
+      value: $(params.git-url)
+    - name: revision
+      value: $(params.revision)
+    runAfter:
+    - init
+    taskRef:
+      params:
+      - name: name
+        value: git-clone
+      - name: bundle
+        value: quay.io/redhat-appstudio-tekton-catalog/task-git-clone:0.1@sha256:729ed7f3b7a3da2658c80655039989a66da207b91036893409bd1305e69a655f
+      - name: kind
+        value: task
+      resolver: bundles
+    when:
+    - input: $(tasks.init.results.build)
+      operator: in
+      values:
+      - "true"
+    workspaces:
+    - name: output
+      workspace: workspace-arm64
+    - name: basic-auth
+      workspace: git-auth
+
+  - name: prefetch-dependencies-arm64
+    params:
+    - name: input
+      value: $(params.prefetch-input)
+    runAfter:
+    - clone-repository-arm64
+    taskRef:
+      params:
+      - name: name
+        value: prefetch-dependencies
+      - name: bundle
+        value: quay.io/redhat-appstudio-tekton-catalog/task-prefetch-dependencies:0.1@sha256:0285e38b5b88552ef3d760db83e6a0ce91d8d308b48890885f51b13571a4e057
+      - name: kind
+        value: task
+      resolver: bundles
+    when:
+    - input: $(params.prefetch-input)
+      operator: notin
+      values:
+      - ""
+    workspaces:
+    - name: source
+      workspace: workspace-arm64
+    - name: git-basic-auth
+      workspace: git-auth
+
+  - name: build-container-arm64
+    params:
+    - name: IMAGE
+      value: $(params.output-image)
+    - name: DOCKERFILE
+      value: $(params.dockerfile)
+    - name: CONTEXT
+      value: $(params.path-context)
+    - name: HERMETIC
+      value: $(params.hermetic)
+    - name: PREFETCH_INPUT
+      value: $(params.prefetch-input)
+    - name: IMAGE_EXPIRES_AFTER
+      value: $(params.image-expires-after)
+    - name: COMMIT_SHA
+      value: $(tasks.clone-repository-arm64.results.commit)
+    - name: BUILD_ARGS_FILE
+      value: $(params.build-args-file)
+    runAfter:
+    - prefetch-dependencies-arm64
+    taskRef:
+      params:
+      - name: name
+        value: buildah
+      - name: bundle
+        value: quay.io/redhat-appstudio-tekton-catalog/task-buildah:0.1@sha256:13447a7b6a20e51875124c3510a4b6e86119f7b3ba89e2c997e0befefefb65f4
+      - name: kind
+        value: task
+      resolver: bundles
+    when:
+    - input: $(tasks.init.results.build)
+      operator: in
+      values:
+      - "true"
+    workspaces:
+    - name: source
+      workspace: workspace-arm64
+
+  - name: build-container
+    params:
+    - name: IMAGE
+      value: $(params.output-image)
+    - name: COMMIT_SHA
+      value: $(tasks.clone-repository-amd64.results.commit)
+    - name: IMAGES
+      value:
+        - $(tasks.build-container-amd64.results.IMAGE_URL)@$(tasks.build-container-amd64.results.IMAGE_DIGEST)
+        - $(tasks.build-container-arm64.results.IMAGE_URL)@$(tasks.build-container-arm64.results.IMAGE_DIGEST)
+    runAfter:
+    - build-container-amd64
+    - build-container-arm64
+    taskRef:
+      params:
+      - name: name
+        value: build-image-manifest
+      - name: bundle
+        value: quay.io/redhat-appstudio-tekton-catalog/task-build-image-manifest:0.1@sha256:e064b63b2311d23d6bf6538347cb4eb18c980d61883f48149bc9c728f76b276c
+      - name: kind
+        value: task
+      resolver: bundles
+    when:
+    - input: $(tasks.init.results.build)
+      operator: in
+      values:
+      - "true"
+
   - name: build-source-image
     params:
     - name: BINARY_IMAGE
       value: $(params.output-image)
     - name: BASE_IMAGES
-      value: $(tasks.build-container.results.BASE_IMAGES_DIGESTS)
+      # NOTICE:
+      value: $(tasks.build-container-amd64.results.BASE_IMAGES_DIGESTS)
     runAfter:
     - build-container
     taskRef:
@@ -244,17 +376,18 @@ spec:
       - "true"
     workspaces:
     - name: workspace
-      workspace: workspace
+      workspace: workspace-amd64
+
   - name: deprecated-base-image-check
     params:
     - name: BASE_IMAGES_DIGESTS
-      value: $(tasks.build-container.results.BASE_IMAGES_DIGESTS)
+      value: $(tasks.build-container-amd64.results.BASE_IMAGES_DIGESTS)
     - name: IMAGE_URL
-      value: $(tasks.build-container.results.IMAGE_URL)
+      value: $(tasks.build-container-amd64.results.IMAGE_URL)
     - name: IMAGE_DIGEST
-      value: $(tasks.build-container.results.IMAGE_DIGEST)
+      value: $(tasks.build-container-amd64.results.IMAGE_DIGEST)
     runAfter:
-    - build-container
+    - build-container-amd64
     taskRef:
       params:
       - name: name
@@ -269,14 +402,15 @@ spec:
       operator: in
       values:
       - "false"
+
   - name: clair-scan
     params:
     - name: image-digest
-      value: $(tasks.build-container.results.IMAGE_DIGEST)
+      value: $(tasks.build-container-amd64.results.IMAGE_DIGEST)
     - name: image-url
-      value: $(tasks.build-container.results.IMAGE_URL)
+      value: $(tasks.build-container-amd64.results.IMAGE_URL)
     runAfter:
-    - build-container
+    - build-container-amd64
     taskRef:
       params:
       - name: name
@@ -291,12 +425,13 @@ spec:
       operator: in
       values:
       - "false"
+
   - name: ecosystem-cert-preflight-checks
     params:
     - name: image-url
-      value: $(tasks.build-container.results.IMAGE_URL)
+      value: $(tasks.build-container-amd64.results.IMAGE_URL)
     runAfter:
-    - build-container
+    - build-container-amd64
     taskRef:
       params:
       - name: name
@@ -311,9 +446,10 @@ spec:
       operator: in
       values:
       - "false"
+
   - name: sast-snyk-check
     runAfter:
-    - clone-repository
+    - clone-repository-amd64
     taskRef:
       params:
       - name: name
@@ -330,15 +466,16 @@ spec:
       - "false"
     workspaces:
     - name: workspace
-      workspace: workspace
+      workspace: workspace-amd64
+
   - name: clamav-scan
     params:
     - name: image-digest
-      value: $(tasks.build-container.results.IMAGE_DIGEST)
+      value: $(tasks.build-container-amd64.results.IMAGE_DIGEST)
     - name: image-url
-      value: $(tasks.build-container.results.IMAGE_URL)
+      value: $(tasks.build-container-amd64.results.IMAGE_URL)
     runAfter:
-    - build-container
+    - build-container-amd64
     taskRef:
       params:
       - name: name
@@ -356,11 +493,11 @@ spec:
   - name: sbom-json-check
     params:
     - name: IMAGE_URL
-      value: $(tasks.build-container.results.IMAGE_URL)
+      value: $(tasks.build-container-amd64.results.IMAGE_URL)
     - name: IMAGE_DIGEST
-      value: $(tasks.build-container.results.IMAGE_DIGEST)
+      value: $(tasks.build-container-amd64.results.IMAGE_DIGEST)
     runAfter:
-    - build-container
+    - build-container-amd64
     taskRef:
       params:
       - name: name
@@ -394,6 +531,7 @@ spec:
         value: task
       resolver: bundles
   workspaces:
-  - name: workspace
+  - name: workspace-amd64
+  - name: workspace-arm64
   - name: git-auth
     optional: true
