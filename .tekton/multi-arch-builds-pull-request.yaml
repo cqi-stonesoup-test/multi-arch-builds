@@ -30,6 +30,12 @@ spec:
     value: .
   - name: revision
     value: '{{revision}}'
+  - name: hermetic
+    value: 'true'
+  - name: prefetch-input
+    value: 'gomod'
+  - name: build-source-image
+    value: 'true'
   pipelineRef:
     name: ci-build-pipeline
   taskRunTemplate: {}
