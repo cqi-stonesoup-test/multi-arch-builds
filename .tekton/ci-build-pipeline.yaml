@@ -190,7 +190,7 @@ spec:
   - name: build-container-amd64
     params:
     - name: IMAGE
-      value: $(params.output-image)
+      value: $(params.output-image)-amd64
     - name: DOCKERFILE
       value: $(params.dockerfile)
     - name: CONTEXT
@@ -205,14 +205,16 @@ spec:
       value: $(tasks.clone-repository-amd64.results.commit)
     - name: BUILD_ARGS_FILE
       value: $(params.build-args-file)
+    - name: PLATFORM
+      value: linux/amd64
     runAfter:
     - prefetch-dependencies-amd64
     taskRef:
       params:
       - name: name
-        value: buildah
+        value: buildah-remote
       - name: bundle
-        value: quay.io/redhat-appstudio-tekton-catalog/task-buildah:0.1@sha256:7cd80204a133c96ccc72bb8d6be0caeaf5014924e679d3686560c8e54cb87d24
+        value: quay.io/redhat-appstudio-tekton-catalog/task-buildah-remote:0.1@sha256:86f1b469437557bb3595699f9c67b628248fc46da35de76acea5830265860b91
       - name: kind
         value: task
       resolver: bundles
@@ -284,7 +286,7 @@ spec:
   - name: build-container-arm64
     params:
     - name: IMAGE
-      value: $(params.output-image)
+      value: $(params.output-image)-arm64
     - name: DOCKERFILE
       value: $(params.dockerfile)
     - name: CONTEXT
@@ -299,14 +301,16 @@ spec:
       value: $(tasks.clone-repository-arm64.results.commit)
     - name: BUILD_ARGS_FILE
       value: $(params.build-args-file)
+    - name: PLATFORM
+      value: linux/arm64
     runAfter:
     - prefetch-dependencies-arm64
     taskRef:
       params:
       - name: name
-        value: buildah
+        value: buildah-remote
       - name: bundle
-        value: quay.io/redhat-appstudio-tekton-catalog/task-buildah:0.1@sha256:7cd80204a133c96ccc72bb8d6be0caeaf5014924e679d3686560c8e54cb87d24
+        value: quay.io/redhat-appstudio-tekton-catalog/task-buildah-remote:0.1@sha256:86f1b469437557bb3595699f9c67b628248fc46da35de76acea5830265860b91
       - name: kind
         value: task
       resolver: bundles
