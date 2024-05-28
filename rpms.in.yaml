@@ -1,0 +1,10 @@
+contentOrigin:
+  repofiles:
+    - ./fedora.repo
+
+packages:
+  # list of rpm names to resolve
+  - vim-enhanced
+  - mutt
+  - bash
+  - bat
