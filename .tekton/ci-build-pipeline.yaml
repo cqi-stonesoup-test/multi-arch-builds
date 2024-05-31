@@ -165,6 +165,8 @@ spec:
     params:
     - name: input
       value: $(params.prefetch-input)
+    - name: dev-package-managers
+      value: 'true'
     runAfter:
     - clone-repository-amd64
     taskRef:
@@ -261,6 +263,8 @@ spec:
     params:
     - name: input
       value: $(params.prefetch-input)
+    - name: dev-package-managers
+      value: 'true'
     runAfter:
     - clone-repository-arm64
     taskRef:
