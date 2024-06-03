@@ -4,6 +4,6 @@ WORKDIR /src
 COPY bing.go .
 RUN go build -o bing bing.go
 
-FROM registry.access.redhat.com/ubi9/ubi:9.3-1361.1699548029
+FROM registry.access.redhat.com/ubi9/ubi:9.4-947.1716476138
 COPY --from=builder /src/bing /bin/bing
 CMD ["/bin/bing"]
