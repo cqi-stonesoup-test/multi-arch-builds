@@ -557,7 +557,289 @@ arches:
     name: xxd
     evr: 2:9.0.1927-1.fc39
     sourcerpm: vim-9.0.1927-1.fc39.src.rpm
-  source: []
+  source:
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/g/gpgme-1.20.0-5.fc39.src.rpm
+    repoid: fedora-source
+    size: 1873470
+    checksum: sha256:05cf9b7cb41a6e44dbfe0578a831da28308567daf7ca6a42176c14ca782fb8e9
+    name: gpgme
+    evr: 1.20.0-5.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/g/gpm-1.20.7-44.fc39.src.rpm
+    repoid: fedora-source
+    size: 251337
+    checksum: sha256:2eb2412dde91b1130433c90ad53b889cb1e0fb0df324e015f29e76d7235ac438
+    name: gpm
+    evr: 1.20.7-44.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/g/groff-1.23.0-2.fc39.src.rpm
+    repoid: fedora-source
+    size: 7474300
+    checksum: sha256:f2f722b9fc92fbaa1a860b46118871ac3775cb797ebd5d9689418a602024a3ad
+    name: groff
+    evr: 1.23.0-2.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/l/libsodium-1.0.18-14.fc39.src.rpm
+    repoid: fedora-source
+    size: 1953916
+    checksum: sha256:d20e5f6e358aa0c07260872ffb00d502f77778ae7496a836da0a65a6ce1cd709
+    name: libsodium
+    evr: 1.0.18-14.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/m/mailcap-2.1.54-2.fc39.src.rpm
+    repoid: fedora-source
+    size: 51226
+    checksum: sha256:b6814f72eda5291807ceeb8ef4b6fbfc9537923d3226914bbbae9e23803cdcac
+    name: mailcap
+    evr: 2.1.54-2.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/m/mutt-2.2.10-2.fc39.src.rpm
+    repoid: fedora-source
+    size: 5596777
+    checksum: sha256:589c9d0fada4da8c4e5d9127a056cb120eb8e6e4fba5ea4ca5c2c925875cb921
+    name: mutt
+    evr: 5:2.2.10-2.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/n/ncurses-6.4-7.20230520.fc39.src.rpm
+    repoid: fedora-source
+    size: 3701271
+    checksum: sha256:5cbdf7cf8cae8334fd32cea290e86fd8b56d843ba8c5e32d9e55d6ca907daaba
+    name: ncurses
+    evr: 6.4-7.20230520.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/o/oniguruma-6.9.8^20230501git41a3b80-2.fc39.src.rpm
+    repoid: fedora-source
+    size: 7437553
+    checksum: sha256:acb417c9cf419830e240fc8d194c8a035a8682d6ff62f22508d921eec3200853
+    name: oniguruma
+    evr: 6.9.8^20230501git41a3b80-2.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-5.38.0-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 13923769
+    checksum: sha256:087557db7cd77e974b4d6b4c0ac0f1678a221c35d60e988f779d7e4ee3111eff
+    name: perl
+    evr: 4:5.38.0-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Carp-1.54-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 50146
+    checksum: sha256:344015029315e97975d83ebbd223ea8d4e108605221f2ab0b7b4eba1708de8f6
+    name: perl-Carp
+    evr: 1.54-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Data-Dumper-2.188-501.fc39.src.rpm
+    repoid: fedora-source
+    size: 202278
+    checksum: sha256:17796cb2f6e02779c31daa01ebd086b0c0b77dc2a8e196c556b1b16f179b5943
+    name: perl-Data-Dumper
+    evr: 2.188-501.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Digest-1.20-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 30387
+    checksum: sha256:97c7ee684c3b7bea1e4b94aa4adc21de2463849757bca6aaa20596c906eb00b8
+    name: perl-Digest
+    evr: 1.20-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Digest-MD5-2.58-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 66587
+    checksum: sha256:30a46620997d4847d798635688641d7aa861559e94c0d23f634c988b84a76b40
+    name: perl-Digest-MD5
+    evr: 2.58-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Encode-3.19-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 1954228
+    checksum: sha256:9adacdf87c8f4d388b4e1f5ede2c32aa90f52f6cc70c6b47a5ae61b112f3fc6d
+    name: perl-Encode
+    evr: 4:3.19-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Exporter-5.77-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 44333
+    checksum: sha256:68d94987d64ac13ef7da617d7ddef78ab1a434a0ec5497a1598546de862b6ef3
+    name: perl-Exporter
+    evr: 5.77-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-File-Path-2.18-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 49498
+    checksum: sha256:d79dcd175a9b1c346672ebb6d7099829349b17287651fc27d5cc75681d46900b
+    name: perl-File-Path
+    evr: 2.18-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-File-Temp-0.231.100-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 95870
+    checksum: sha256:8a2342bd411db72c3601cd70e47d13b985fabc5ca4f601c1eff40741cc3430b7
+    name: perl-File-Temp
+    evr: 1:0.231.100-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Getopt-Long-2.54-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 63767
+    checksum: sha256:2c43edba131a31bf42a9567e34a8eaae966de0463dbe696e9db1bbbdd138f8a4
+    name: perl-Getopt-Long
+    evr: 1:2.54-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-HTTP-Tiny-0.088-3.fc39.src.rpm
+    repoid: fedora-source
+    size: 102571
+    checksum: sha256:29b03d5d56b148a3c4b8d04b8872e520313e6bf6b35a1e8b0b3371463f5f2dc0
+    name: perl-HTTP-Tiny
+    evr: 0.088-3.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-IO-Socket-IP-0.42-1.fc39.src.rpm
+    repoid: fedora-source
+    size: 70157
+    checksum: sha256:d87b450a49c7f5ad404518ff50eb98c238e39e9e39aa365043d1656b26fa613b
+    name: perl-IO-Socket-IP
+    evr: 0.42-1.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-IO-Socket-SSL-2.083-3.fc39.src.rpm
+    repoid: fedora-source
+    size: 377967
+    checksum: sha256:92deb0721fa7ee6cae3cee639ae48d98c2041cf0e08ca5c08a3eba6fcc7932f8
+    name: perl-IO-Socket-SSL
+    evr: 2.083-3.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-MIME-Base64-3.16-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 48470
+    checksum: sha256:445f3f727dc65798d8e6bceb0260e4cdced8404cff07c0e989aa6b9187947529
+    name: perl-MIME-Base64
+    evr: 3.16-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Mozilla-CA-20230801-1.fc39.src.rpm
+    repoid: fedora-source
+    size: 158746
+    checksum: sha256:30d8e5eadcc7ec30e243bed4bfa50adc14d81ec20deb620eb97264cad7636c53
+    name: perl-Mozilla-CA
+    evr: 20230801-1.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Net-SSLeay-1.92-10.fc39.src.rpm
+    repoid: fedora-source
+    size: 634918
+    checksum: sha256:7e4d4cafdbc2f41d6671b259e2f9decc1075d171ca6fe1737af8315aa9c4e72f
+    name: perl-Net-SSLeay
+    evr: 1.92-10.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-PathTools-3.89-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 160046
+    checksum: sha256:b0da013e4a6b31a88e6dc614032612f47cb72c0a9e5154d7de29a1903243bf06
+    name: perl-PathTools
+    evr: 3.89-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Pod-Escapes-1.07-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 25549
+    checksum: sha256:b83e12219857feef3dcbb385d3c76d5fc4ab541f992e82f896450980259c84ad
+    name: perl-Pod-Escapes
+    evr: 1:1.07-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Pod-Perldoc-3.28.01-501.fc39.src.rpm
+    repoid: fedora-source
+    size: 235802
+    checksum: sha256:cf3ba9b062946f393329dceb888211a943c45a3636b541b05b86a5c3778e29d8
+    name: perl-Pod-Perldoc
+    evr: 3.28.01-501.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Pod-Simple-3.45-4.fc39.src.rpm
+    repoid: fedora-source
+    size: 326000
+    checksum: sha256:e3d8ebbb25706b95b38b27227061b277b87a775a7a26abcb66bfabc2af25c2f3
+    name: perl-Pod-Simple
+    evr: 1:3.45-4.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Pod-Usage-2.03-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 99931
+    checksum: sha256:1ecf53595021aa070c636a4fc4c1aed985859273867e580f4c892bef85d93cde
+    name: perl-Pod-Usage
+    evr: 4:2.03-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Scalar-List-Utils-1.63-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 204211
+    checksum: sha256:1159f761e7e29332195a1a21070e07accbab19e045272395d7627a28e8401250
+    name: perl-Scalar-List-Utils
+    evr: 5:1.63-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Socket-2.037-3.fc39.src.rpm
+    repoid: fedora-source
+    size: 72218
+    checksum: sha256:6792513677abffa2a0f5ab6cb41240dc812d866407fabb7b2242e75b1d059626
+    name: perl-Socket
+    evr: 4:2.037-3.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Storable-3.32-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 283880
+    checksum: sha256:ee8e46dd0a92c7de2e70fcf439e354595075a6b3f9a8f60070d1fb329ff37ab0
+    name: perl-Storable
+    evr: 1:3.32-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Term-ANSIColor-5.01-501.fc39.src.rpm
+    repoid: fedora-source
+    size: 74795
+    checksum: sha256:ce668f05cab13e826a2c0591fbb0fdf3e3eaeb97fb195370981a46df3177381b
+    name: perl-Term-ANSIColor
+    evr: 5.01-501.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Term-Cap-1.18-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 27228
+    checksum: sha256:156585614ffcded74337ee768011c11e594a4d7aefd21e44d2567c38f73e4c7b
+    name: perl-Term-Cap
+    evr: 1.18-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Text-ParseWords-3.31-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 26531
+    checksum: sha256:ec3717d13d99c43d1837dc7102e901310fb7af37931b3a6f91425aefd81f28ec
+    name: perl-Text-ParseWords
+    evr: 3.31-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Text-Tabs+Wrap-2023.0511-3.fc39.src.rpm
+    repoid: fedora-source
+    size: 35839
+    checksum: sha256:95bb229f24bac43b7ed3c21bfe9673c11c869fca0eb24672d1d91f102324cb32
+    name: perl-Text-Tabs+Wrap
+    evr: 2023.0511-3.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Time-Local-1.350-3.fc39.src.rpm
+    repoid: fedora-source
+    size: 65608
+    checksum: sha256:9fb8f5685c0972fa7175efa7e505969e00201fec43a0530fd419bc8780e1d9f5
+    name: perl-Time-Local
+    evr: 2:1.350-3.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-URI-5.21-1.fc39.src.rpm
+    repoid: fedora-source
+    size: 150020
+    checksum: sha256:69c645c8d6e73a428c473c5dec181408bf42d9c7cb0e0c1e6ca625b5251a2385
+    name: perl-URI
+    evr: 5.21-1.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-constant-1.33-501.fc39.src.rpm
+    repoid: fedora-source
+    size: 40955
+    checksum: sha256:81844db15ef17bf0053049256a2e87a5007b5458fb0dfaf6f20b7a0a3727ccea
+    name: perl-constant
+    evr: 1.33-501.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-libnet-3.15-501.fc39.src.rpm
+    repoid: fedora-source
+    size: 117410
+    checksum: sha256:bdfd9d864f029f6f479b215a117cda2a359b60b5ad6e1ccd00fc258e7e9b70ff
+    name: perl-libnet
+    evr: 3.15-501.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-parent-0.241-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 35208
+    checksum: sha256:eaa58645b91d1d78e65c84fa63809aa14fe3b65ce136f9e79e26d602d04757a0
+    name: perl-parent
+    evr: 1:0.241-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-podlators-5.01-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 176282
+    checksum: sha256:3b71bd6704753e291dcdaf9d6bd244f8c69136fdbfc7b8b02778bd66f4e2bf66
+    name: perl-podlators
+    evr: 1:5.01-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/r/rust-bat-0.23.0-2.fc39.src.rpm
+    repoid: fedora-source
+    size: 1765981
+    checksum: sha256:ee89a28cea853fe3b3336c0e3c50757512c801e4d4110b749a169c7079719987
+    name: rust-bat
+    evr: 0.23.0-2.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/t/tokyocabinet-1.4.48-23.fc39.src.rpm
+    repoid: fedora-source
+    size: 1026260
+    checksum: sha256:63a018f7cad5ceb9220ada2f4711dd8ef715b9c45ce1386701edbd79d6bb8755
+    name: tokyocabinet
+    evr: 1.4.48-23.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/u/urlview-0.9-35.20131022git08767a.fc39.src.rpm
+    repoid: fedora-source
+    size: 115873
+    checksum: sha256:99f0169fa7202e6c58ea92a8a528b29c95115322535d21ca20bbc13df111c4ea
+    name: urlview
+    evr: 0.9-35.20131022git08767a.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/v/vim-9.0.1927-1.fc39.src.rpm
+    repoid: fedora-source
+    size: 14382769
+    checksum: sha256:dae76267f265093d0e1b178c05af197bc21b994a264c9c4e7701cce095b62f03
+    name: vim
+    evr: 2:9.0.1927-1.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/w/which-2.21-40.fc39.src.rpm
+    repoid: fedora-source
+    size: 182684
+    checksum: sha256:791428d30c136a2ff8e781b9c32cbd3d506699f1369ae2a589c02fceb72d4533
+    name: which
+    evr: 2.21-40.fc39
 - arch: x86_64
   packages:
   - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/x86_64/os/Packages/b/bat-0.23.0-2.fc39.x86_64.rpm
@@ -1113,4 +1395,286 @@ arches:
     name: xxd
     evr: 2:9.0.1927-1.fc39
     sourcerpm: vim-9.0.1927-1.fc39.src.rpm
-  source: []
+  source:
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/g/gpgme-1.20.0-5.fc39.src.rpm
+    repoid: fedora-source
+    size: 1873470
+    checksum: sha256:05cf9b7cb41a6e44dbfe0578a831da28308567daf7ca6a42176c14ca782fb8e9
+    name: gpgme
+    evr: 1.20.0-5.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/g/gpm-1.20.7-44.fc39.src.rpm
+    repoid: fedora-source
+    size: 251337
+    checksum: sha256:2eb2412dde91b1130433c90ad53b889cb1e0fb0df324e015f29e76d7235ac438
+    name: gpm
+    evr: 1.20.7-44.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/g/groff-1.23.0-2.fc39.src.rpm
+    repoid: fedora-source
+    size: 7474300
+    checksum: sha256:f2f722b9fc92fbaa1a860b46118871ac3775cb797ebd5d9689418a602024a3ad
+    name: groff
+    evr: 1.23.0-2.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/l/libsodium-1.0.18-14.fc39.src.rpm
+    repoid: fedora-source
+    size: 1953916
+    checksum: sha256:d20e5f6e358aa0c07260872ffb00d502f77778ae7496a836da0a65a6ce1cd709
+    name: libsodium
+    evr: 1.0.18-14.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/m/mailcap-2.1.54-2.fc39.src.rpm
+    repoid: fedora-source
+    size: 51226
+    checksum: sha256:b6814f72eda5291807ceeb8ef4b6fbfc9537923d3226914bbbae9e23803cdcac
+    name: mailcap
+    evr: 2.1.54-2.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/m/mutt-2.2.10-2.fc39.src.rpm
+    repoid: fedora-source
+    size: 5596777
+    checksum: sha256:589c9d0fada4da8c4e5d9127a056cb120eb8e6e4fba5ea4ca5c2c925875cb921
+    name: mutt
+    evr: 5:2.2.10-2.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/n/ncurses-6.4-7.20230520.fc39.src.rpm
+    repoid: fedora-source
+    size: 3701271
+    checksum: sha256:5cbdf7cf8cae8334fd32cea290e86fd8b56d843ba8c5e32d9e55d6ca907daaba
+    name: ncurses
+    evr: 6.4-7.20230520.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/o/oniguruma-6.9.8^20230501git41a3b80-2.fc39.src.rpm
+    repoid: fedora-source
+    size: 7437553
+    checksum: sha256:acb417c9cf419830e240fc8d194c8a035a8682d6ff62f22508d921eec3200853
+    name: oniguruma
+    evr: 6.9.8^20230501git41a3b80-2.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-5.38.0-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 13923769
+    checksum: sha256:087557db7cd77e974b4d6b4c0ac0f1678a221c35d60e988f779d7e4ee3111eff
+    name: perl
+    evr: 4:5.38.0-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Carp-1.54-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 50146
+    checksum: sha256:344015029315e97975d83ebbd223ea8d4e108605221f2ab0b7b4eba1708de8f6
+    name: perl-Carp
+    evr: 1.54-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Data-Dumper-2.188-501.fc39.src.rpm
+    repoid: fedora-source
+    size: 202278
+    checksum: sha256:17796cb2f6e02779c31daa01ebd086b0c0b77dc2a8e196c556b1b16f179b5943
+    name: perl-Data-Dumper
+    evr: 2.188-501.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Digest-1.20-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 30387
+    checksum: sha256:97c7ee684c3b7bea1e4b94aa4adc21de2463849757bca6aaa20596c906eb00b8
+    name: perl-Digest
+    evr: 1.20-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Digest-MD5-2.58-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 66587
+    checksum: sha256:30a46620997d4847d798635688641d7aa861559e94c0d23f634c988b84a76b40
+    name: perl-Digest-MD5
+    evr: 2.58-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Encode-3.19-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 1954228
+    checksum: sha256:9adacdf87c8f4d388b4e1f5ede2c32aa90f52f6cc70c6b47a5ae61b112f3fc6d
+    name: perl-Encode
+    evr: 4:3.19-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Exporter-5.77-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 44333
+    checksum: sha256:68d94987d64ac13ef7da617d7ddef78ab1a434a0ec5497a1598546de862b6ef3
+    name: perl-Exporter
+    evr: 5.77-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-File-Path-2.18-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 49498
+    checksum: sha256:d79dcd175a9b1c346672ebb6d7099829349b17287651fc27d5cc75681d46900b
+    name: perl-File-Path
+    evr: 2.18-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-File-Temp-0.231.100-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 95870
+    checksum: sha256:8a2342bd411db72c3601cd70e47d13b985fabc5ca4f601c1eff40741cc3430b7
+    name: perl-File-Temp
+    evr: 1:0.231.100-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Getopt-Long-2.54-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 63767
+    checksum: sha256:2c43edba131a31bf42a9567e34a8eaae966de0463dbe696e9db1bbbdd138f8a4
+    name: perl-Getopt-Long
+    evr: 1:2.54-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-HTTP-Tiny-0.088-3.fc39.src.rpm
+    repoid: fedora-source
+    size: 102571
+    checksum: sha256:29b03d5d56b148a3c4b8d04b8872e520313e6bf6b35a1e8b0b3371463f5f2dc0
+    name: perl-HTTP-Tiny
+    evr: 0.088-3.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-IO-Socket-IP-0.42-1.fc39.src.rpm
+    repoid: fedora-source
+    size: 70157
+    checksum: sha256:d87b450a49c7f5ad404518ff50eb98c238e39e9e39aa365043d1656b26fa613b
+    name: perl-IO-Socket-IP
+    evr: 0.42-1.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-IO-Socket-SSL-2.083-3.fc39.src.rpm
+    repoid: fedora-source
+    size: 377967
+    checksum: sha256:92deb0721fa7ee6cae3cee639ae48d98c2041cf0e08ca5c08a3eba6fcc7932f8
+    name: perl-IO-Socket-SSL
+    evr: 2.083-3.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-MIME-Base64-3.16-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 48470
+    checksum: sha256:445f3f727dc65798d8e6bceb0260e4cdced8404cff07c0e989aa6b9187947529
+    name: perl-MIME-Base64
+    evr: 3.16-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Mozilla-CA-20230801-1.fc39.src.rpm
+    repoid: fedora-source
+    size: 158746
+    checksum: sha256:30d8e5eadcc7ec30e243bed4bfa50adc14d81ec20deb620eb97264cad7636c53
+    name: perl-Mozilla-CA
+    evr: 20230801-1.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Net-SSLeay-1.92-10.fc39.src.rpm
+    repoid: fedora-source
+    size: 634918
+    checksum: sha256:7e4d4cafdbc2f41d6671b259e2f9decc1075d171ca6fe1737af8315aa9c4e72f
+    name: perl-Net-SSLeay
+    evr: 1.92-10.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-PathTools-3.89-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 160046
+    checksum: sha256:b0da013e4a6b31a88e6dc614032612f47cb72c0a9e5154d7de29a1903243bf06
+    name: perl-PathTools
+    evr: 3.89-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Pod-Escapes-1.07-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 25549
+    checksum: sha256:b83e12219857feef3dcbb385d3c76d5fc4ab541f992e82f896450980259c84ad
+    name: perl-Pod-Escapes
+    evr: 1:1.07-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Pod-Perldoc-3.28.01-501.fc39.src.rpm
+    repoid: fedora-source
+    size: 235802
+    checksum: sha256:cf3ba9b062946f393329dceb888211a943c45a3636b541b05b86a5c3778e29d8
+    name: perl-Pod-Perldoc
+    evr: 3.28.01-501.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Pod-Simple-3.45-4.fc39.src.rpm
+    repoid: fedora-source
+    size: 326000
+    checksum: sha256:e3d8ebbb25706b95b38b27227061b277b87a775a7a26abcb66bfabc2af25c2f3
+    name: perl-Pod-Simple
+    evr: 1:3.45-4.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Pod-Usage-2.03-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 99931
+    checksum: sha256:1ecf53595021aa070c636a4fc4c1aed985859273867e580f4c892bef85d93cde
+    name: perl-Pod-Usage
+    evr: 4:2.03-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Scalar-List-Utils-1.63-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 204211
+    checksum: sha256:1159f761e7e29332195a1a21070e07accbab19e045272395d7627a28e8401250
+    name: perl-Scalar-List-Utils
+    evr: 5:1.63-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Socket-2.037-3.fc39.src.rpm
+    repoid: fedora-source
+    size: 72218
+    checksum: sha256:6792513677abffa2a0f5ab6cb41240dc812d866407fabb7b2242e75b1d059626
+    name: perl-Socket
+    evr: 4:2.037-3.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Storable-3.32-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 283880
+    checksum: sha256:ee8e46dd0a92c7de2e70fcf439e354595075a6b3f9a8f60070d1fb329ff37ab0
+    name: perl-Storable
+    evr: 1:3.32-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Term-ANSIColor-5.01-501.fc39.src.rpm
+    repoid: fedora-source
+    size: 74795
+    checksum: sha256:ce668f05cab13e826a2c0591fbb0fdf3e3eaeb97fb195370981a46df3177381b
+    name: perl-Term-ANSIColor
+    evr: 5.01-501.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Term-Cap-1.18-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 27228
+    checksum: sha256:156585614ffcded74337ee768011c11e594a4d7aefd21e44d2567c38f73e4c7b
+    name: perl-Term-Cap
+    evr: 1.18-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Text-ParseWords-3.31-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 26531
+    checksum: sha256:ec3717d13d99c43d1837dc7102e901310fb7af37931b3a6f91425aefd81f28ec
+    name: perl-Text-ParseWords
+    evr: 3.31-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Text-Tabs+Wrap-2023.0511-3.fc39.src.rpm
+    repoid: fedora-source
+    size: 35839
+    checksum: sha256:95bb229f24bac43b7ed3c21bfe9673c11c869fca0eb24672d1d91f102324cb32
+    name: perl-Text-Tabs+Wrap
+    evr: 2023.0511-3.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-Time-Local-1.350-3.fc39.src.rpm
+    repoid: fedora-source
+    size: 65608
+    checksum: sha256:9fb8f5685c0972fa7175efa7e505969e00201fec43a0530fd419bc8780e1d9f5
+    name: perl-Time-Local
+    evr: 2:1.350-3.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-URI-5.21-1.fc39.src.rpm
+    repoid: fedora-source
+    size: 150020
+    checksum: sha256:69c645c8d6e73a428c473c5dec181408bf42d9c7cb0e0c1e6ca625b5251a2385
+    name: perl-URI
+    evr: 5.21-1.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-constant-1.33-501.fc39.src.rpm
+    repoid: fedora-source
+    size: 40955
+    checksum: sha256:81844db15ef17bf0053049256a2e87a5007b5458fb0dfaf6f20b7a0a3727ccea
+    name: perl-constant
+    evr: 1.33-501.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-libnet-3.15-501.fc39.src.rpm
+    repoid: fedora-source
+    size: 117410
+    checksum: sha256:bdfd9d864f029f6f479b215a117cda2a359b60b5ad6e1ccd00fc258e7e9b70ff
+    name: perl-libnet
+    evr: 3.15-501.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-parent-0.241-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 35208
+    checksum: sha256:eaa58645b91d1d78e65c84fa63809aa14fe3b65ce136f9e79e26d602d04757a0
+    name: perl-parent
+    evr: 1:0.241-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/p/perl-podlators-5.01-500.fc39.src.rpm
+    repoid: fedora-source
+    size: 176282
+    checksum: sha256:3b71bd6704753e291dcdaf9d6bd244f8c69136fdbfc7b8b02778bd66f4e2bf66
+    name: perl-podlators
+    evr: 1:5.01-500.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/r/rust-bat-0.23.0-2.fc39.src.rpm
+    repoid: fedora-source
+    size: 1765981
+    checksum: sha256:ee89a28cea853fe3b3336c0e3c50757512c801e4d4110b749a169c7079719987
+    name: rust-bat
+    evr: 0.23.0-2.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/t/tokyocabinet-1.4.48-23.fc39.src.rpm
+    repoid: fedora-source
+    size: 1026260
+    checksum: sha256:63a018f7cad5ceb9220ada2f4711dd8ef715b9c45ce1386701edbd79d6bb8755
+    name: tokyocabinet
+    evr: 1.4.48-23.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/u/urlview-0.9-35.20131022git08767a.fc39.src.rpm
+    repoid: fedora-source
+    size: 115873
+    checksum: sha256:99f0169fa7202e6c58ea92a8a528b29c95115322535d21ca20bbc13df111c4ea
+    name: urlview
+    evr: 0.9-35.20131022git08767a.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/v/vim-9.0.1927-1.fc39.src.rpm
+    repoid: fedora-source
+    size: 14382769
+    checksum: sha256:dae76267f265093d0e1b178c05af197bc21b994a264c9c4e7701cce095b62f03
+    name: vim
+    evr: 2:9.0.1927-1.fc39
+  - url: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/39/Everything/source/tree/Packages/w/which-2.21-40.fc39.src.rpm
+    repoid: fedora-source
+    size: 182684
+    checksum: sha256:791428d30c136a2ff8e781b9c32cbd3d506699f1369ae2a589c02fceb72d4533
+    name: which
+    evr: 2.21-40.fc39
