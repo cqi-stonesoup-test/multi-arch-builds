@@ -361,7 +361,7 @@ spec:
     taskSpec:
       steps:
       - name: inspect
-        image: registry.access.redhat.com/ubi9/ubi@sha256:6b95efc134c2af3d45472c0a2f88e6085433df058cc210abb2bb061ac4d74359
+        image: registry.access.redhat.com/ubi9/ubi@sha256:d98fdae16212df566150ac975cab860cd8d2cb1b322ed9966d09a13e219112e9
         env:
         - name: WS_AMD64
           value: $(workspaces.wsamd64.path)
