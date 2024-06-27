@@ -355,45 +355,6 @@ spec:
       values:
       - "true"
 
-  - name: inspect-arch-specific-workspaces
-    runAfter:
-    - build-container
-    taskSpec:
-      steps:
-      - name: inspect
-        image: registry.access.redhat.com/ubi9/ubi@sha256:d98fdae16212df566150ac975cab860cd8d2cb1b322ed9966d09a13e219112e9
-        env:
-        - name: WS_AMD64
-          value: $(workspaces.wsamd64.path)
-        # - name: WS_ARM64
-        #   value: $(workspaces.wsarm64.path)
-        script: |
-          #!/usr/bin/env bash
-          set -ex
-          echo "Walk through for amd64"
-          if [ -e "${WS_AMD64}/cachi2" ]; then
-            find "${WS_AMD64}"
-          else
-            ls -l "${WS_AMD64}"
-          fi
-          # echo
-          # echo "==========================="
-          # echo
-          # echo "Walk through for arm64"
-          # if [ -e "${WS_ARM64}/cachi2" ]; then
-          #   find "${WS_ARM64}"
-          # else
-          #   ls -l "${WS_ARM64}"
-          # fi
-      workspaces:
-      - name: wsamd64
-      # - name: wsarm64
-    workspaces:
-    - name: wsamd64
-      workspace: workspace-amd64
-    # - name: wsarm64
-    #   workspace: workspace-arm64
-
   - name: build-source-image
     params:
     - name: BINARY_IMAGE
@@ -402,8 +363,7 @@ spec:
       # NOTICE:
       value: $(tasks.build-container-amd64.results.BASE_IMAGES_DIGESTS)
     runAfter:
-    # - build-container
-    - inspect-arch-specific-workspaces
+    - build-container
     taskRef:
       params:
       - name: name
