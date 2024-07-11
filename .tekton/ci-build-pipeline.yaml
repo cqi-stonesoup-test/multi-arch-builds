@@ -538,6 +538,32 @@ spec:
       - name: kind
         value: task
       resolver: bundles
+
+  - name: push-build-file
+    runAfter:
+    - build-container
+    taskRef:
+      resolver: bundles
+      params:
+      - name: kind
+        value: task
+      - name: name
+        value: push-build-file
+      - name: bundle
+        value: quay.io/konflux-ci/pull-request-builds@sha256:d04a6494f3952f662e9c9bc79f285a5d2b817f4b6a4f8c8c22d6f8c89b81ba9c
+    params:
+    - name: IMAGE
+      value: $(tasks.build-container.results.IMAGE_URL)
+    - name: IMAGE_DIGEST
+      value: $(tasks.build-container.results.IMAGE_DIGEST)
+    - name: BUILD_FILE
+      value: $(params.dockerfile)
+    - name: CONTEXT
+      value: $(params.path-context)
+    workspaces:
+    - name: workspace
+      workspace: workspace-amd64
+
   workspaces:
   - name: workspace-amd64
   - name: workspace-arm64
