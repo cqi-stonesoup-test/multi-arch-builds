@@ -550,7 +550,7 @@ spec:
       - name: name
         value: push-build-file
       - name: bundle
-        value: quay.io/konflux-ci/pull-request-builds:push-build-file-0.1@sha256:08e7852647a2cdd7d377994106495a08bc7e1b437b5ef57afb6dc89b54f81374
+        value: quay.io/konflux-ci/pull-request-builds:push-build-file-0.1@sha256:7837a049913b64e491569ab9f45eca0fc438cda35e6a4f218c593e670b005eef
     params:
     - name: IMAGE
       value: $(tasks.build-container.results.IMAGE_URL)
