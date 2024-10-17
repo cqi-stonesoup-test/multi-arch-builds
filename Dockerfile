@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi9/go-toolset@sha256:ae17d73e70a966f39ef4dfca74241e3ca4374cd1198b02c30ea0748b8dcc83a6 AS builder
+FROM registry.access.redhat.com/ubi9/go-toolset@sha256:b08eed026ac732d125e61ebfe3a0ef1dea7293b6a1c6d8b71c007a3088c4ed3b AS builder
 # FROM registry.fedoraproject.org/fedora:40
 WORKDIR /src
 COPY bing.go .
